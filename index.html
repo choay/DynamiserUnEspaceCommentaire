@@ -129,18 +129,20 @@
       divTwo.appendChild(divThree);     
       divThree.appendChild(paragraph);
 
-      divOne.style.color = 'red';
+      
   }
  
 
-    if((nom == '')||(prenom == '')||(commentaire == '')){
+    if(nom == ''||prenom == ''||commentaire == ''){
       document.querySelector('#error-message').style.display = 'block';
+      
     }else{
       newComment();
-      
+      document.querySelector('#error-message').style.display = 'none';
+      document.querySelector('form').reset();
     }
-    
-    e.preventDefault();
+        e.preventDefault();
+        
   }
   
 
